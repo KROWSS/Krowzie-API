@@ -15,8 +15,7 @@ Retrieve Fortnite player avatar information using this API.
 - `Authorization`: Bearer "Token": The account's token
 
 ## Example
-
-\`\`\`javascript
+```javascript
 const axios = require('axios');
 
 const rq = await axios.get('http://api.krowzie.uk/avatar/THEACCID', {
@@ -26,11 +25,11 @@ const rq = await axios.get('http://api.krowzie.uk/avatar/THEACCID', {
 });
 
 console.log(rq.data);
-\`\`\`
+```
 
 ## Response
 
-\`\`\`json
+```json
 [
   {
     "accountId": "the id of user",
@@ -38,5 +37,5 @@ console.log(rq.data);
     "avatarId": "ATHENACHARACTER:CID_165_ATHENA_COMMANDO_M_DARKVIKING"
   }
 ]
-\`\`\`
+```
 
