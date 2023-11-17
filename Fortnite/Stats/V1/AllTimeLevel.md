@@ -18,7 +18,7 @@ Retrieve Fortnite player avatar information using this API.
 const axios = require('axios');
 
 const rq = await axios.post(
-  `http://api.krowzie.uk/epic/Fortnite/QueryProfile/easy-athena/:accountId`,
+  `http://api.krowzie.uk/epic/Fortnite/Stats/V1/AllTimeLevel/:accountId`,
   {},
   {
     headers: {
@@ -36,16 +36,12 @@ console.log("Got info:", rq.data);
 ```bash
 [
  
-  profileRevision: 56897,
-  profileId: 'athena',
-  profileChangesBaseRevision: 59997,
-  profileChanges: [ { changeType: 'fullProfileUpdate', profile: [Object] } ],
-  profileCommandRevision: 49030,
-  serverTime: '2023-11-15T19:46:11.410Z',
-  responseVersion: 1
+  startTime: 0,
+    endTime: 9223372036854776000,
+    stats: { s22_social_bp_level: 10014 },
+    accountId: 'Users-Acc-Id'
 
 ]
 ```
 
-##  From There you can see your profile Object!
 
