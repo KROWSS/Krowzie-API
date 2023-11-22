@@ -1,7 +1,7 @@
-# Epic Games - Fortnite - QueryProfile - EASY ATHENA
+# Epic Games - Fortnite - Stats - V1 - AllTimeLevel
 Retrieve Fortnite player avatar information using this API.
 
-**URL:** `http://api.krowzie.uk/epic/Fortnite/QueryProfile/easy-athena/:accountId`  
+**URL:** `http://api.krowzie.uk/epic/Fortnite/Stats/V1/AllTimeLevel/:accoundId`  
 **Method:** GET  
 **Auth Required:** Yes
 
@@ -17,16 +17,16 @@ Retrieve Fortnite player avatar information using this API.
 ```javascript
 const axios = require('axios');
 
-const rq = await axios.post(
-  `http://api.krowzie.uk/epic/Fortnite/Stats/V1/AllTimeLevel/:accountId`,
-  {},
-  {
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: 'Bearer TOKEN',
-    },
-  }
-);
+const rq = await axios.get(
+        `http://api.krowzie.uk/epic/Fortnite/Stats/V1/AllTimeLevel/:accoundId`,
+        
+        {
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${auth.access_token}`,
+          },
+        }
+      );
 
 console.log("Got info:", rq.data);
 ```
